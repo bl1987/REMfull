@@ -9,7 +9,12 @@ namespace REM.BL
     public class Drink:Item
     {
         public int Quantity { get; set; }
-
+        public Drink(string name, int quantity)
+        {
+            Name = name;
+            Quantity = quantity;
+            Type = "Drink";
+        }
         public Drink(string name, int quantity, decimal cost)
         {
             Name = name;

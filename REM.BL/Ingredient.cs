@@ -9,7 +9,12 @@ namespace REM.BL
     public class Ingredient:Item
     {
         public float Weight { get; set; }
-
+        public Ingredient(string name, float weight)
+        {
+            Name = name;
+            Weight = weight;
+            Type = "Ingredient";
+        }
         public Ingredient(string name, float weight, decimal cost)
         {
             Name = name;

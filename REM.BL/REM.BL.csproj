@@ -46,6 +46,7 @@
     <Compile Include="Expense.cs" />
     <Compile Include="Ingredient.cs" />
     <Compile Include="IngredientInventory.cs" />
+    <Compile Include="InventoryController.cs" />
     <Compile Include="Item.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

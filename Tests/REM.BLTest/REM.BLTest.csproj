@@ -51,6 +51,10 @@
   <ItemGroup>
     <Compile Include="DrinkTest.cs" />
     <Compile Include="IngredientTest.cs" />
+    <Compile Include="InventoryControllerTest_AddDrink.cs" />
+    <Compile Include="InventoryControllerTest_AddIngredient.cs" />
+    <Compile Include="InventoryControllerTest_DeleteDrink.cs" />
+    <Compile Include="InventoryControllerTest_DeleteIngredient.cs" />
     <Compile Include="ItemTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

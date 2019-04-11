@@ -9,6 +9,9 @@ namespace REM.BL
     public class IngredientInventory
     {
         public List<Ingredient> IngredientList { get; set; }
-
+        public IngredientInventory()
+        {
+            IngredientList = new List<Ingredient>();
+        }
     }
 }

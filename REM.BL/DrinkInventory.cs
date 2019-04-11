@@ -9,5 +9,9 @@ namespace REM.BL
     public class DrinkInventory
     {
         public List<Drink> DrinkList { get; set; }
+        public DrinkInventory()
+        {
+            DrinkList = new List<Drink>();
+        }
     }
 }
