@@ -57,6 +57,7 @@
     <Compile Include="InventoryControllerTest_DeleteIngredient.cs" />
     <Compile Include="ItemTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RecipeControllerTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
