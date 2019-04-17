@@ -7,11 +7,15 @@ namespace REM.BLTest
     [TestClass]
     public class InventoryControllerTest_AddDrink
     {
+        DrinkInventory inventory;
+        public InventoryControllerTest_AddDrink()
+        {
+            inventory = new DrinkInventory();
+            InventoryController.AddInventory(new Drink("coke", 100, 100), inventory);
+        }
         [TestMethod]
         public void AddFirstDrinkToInventoryName()
         {
-            DrinkInventory inventory = new DrinkInventory();
-            InventoryController.AddInventory(new Drink("coke", 100, 100), inventory);
             var expected = new Drink("coke", 100, 100).Name;
             var actual = inventory.DrinkList[0].Name;
             Assert.AreEqual(expected, actual);
@@ -19,8 +23,6 @@ namespace REM.BLTest
         [TestMethod]
         public void AddFirstDrinkToInventoryQuantity()
         {
-            DrinkInventory inventory = new DrinkInventory();
-            InventoryController.AddInventory(new Drink("coke", 100, 100), inventory);
             var expected = new Drink("coke", 100, 100).Quantity;
             var actual = inventory.DrinkList[0].Quantity;
             Assert.AreEqual(expected, actual);
@@ -28,8 +30,6 @@ namespace REM.BLTest
         [TestMethod]
         public void AddFirstDrinkToInventoryValue()
         {
-            DrinkInventory inventory = new DrinkInventory();
-            InventoryController.AddInventory(new Drink("coke", 100, 100), inventory);
             var expected = new Drink("coke", 100, 100).Value;
             var actual = inventory.DrinkList[0].Value;
             Assert.AreEqual(expected, actual);
@@ -37,8 +37,6 @@ namespace REM.BLTest
         [TestMethod]
         public void AddExsitingDrinkToInventoryQuantity()
         {
-            DrinkInventory inventory = new DrinkInventory();
-            InventoryController.AddInventory(new Drink("coke", 100, 100), inventory);
             InventoryController.AddInventory(new Drink("coke", 200, 100), inventory);
             var expected = 300;
             var actual = inventory.DrinkList[0].Quantity;
@@ -47,8 +45,6 @@ namespace REM.BLTest
         [TestMethod]
         public void AddExsitingDrinkToInventoryValue()
         {
-            DrinkInventory inventory = new DrinkInventory();
-            InventoryController.AddInventory(new Drink("coke", 100, 100), inventory);
             InventoryController.AddInventory(new Drink("coke", 100, 300), inventory);
             var expected = 2;
             var actual = inventory.DrinkList[0].Value;
@@ -57,8 +53,6 @@ namespace REM.BLTest
         [TestMethod]
         public void AddNewDrinkToInventory()
         {
-            DrinkInventory inventory = new DrinkInventory();
-            InventoryController.AddInventory(new Drink("coke", 100, 100), inventory);
             InventoryController.AddInventory(new Drink("sprite", 100, 50), inventory);
             var expected = 2;
             var actual = inventory.DrinkList.Count;
@@ -67,8 +61,6 @@ namespace REM.BLTest
         [TestMethod]
         public void AddNewDrinkToInventoryValue()
         {
-            DrinkInventory inventory = new DrinkInventory();
-            InventoryController.AddInventory(new Drink("coke", 100, 100), inventory);
             InventoryController.AddInventory(new Drink("sprite", 100, 50), inventory);
             InventoryController.AddInventory(new Drink("coke", 100, 300), inventory);
             var expected = 2;
@@ -78,8 +70,6 @@ namespace REM.BLTest
         [TestMethod]
         public void AddMultipleDrinkToInventoryValue()
         {
-            DrinkInventory inventory = new DrinkInventory();
-            InventoryController.AddInventory(new Drink("coke", 100, 100), inventory);
             InventoryController.AddInventory(new Drink("sprite", 100, 50), inventory);
             InventoryController.AddInventory(new Drink("coke", 100, 300), inventory);
             InventoryController.AddInventory(new Drink("juice", 100, 300), inventory);

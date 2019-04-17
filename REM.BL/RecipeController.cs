@@ -34,9 +34,9 @@ namespace REM.BL
                 return false;
             }
         }
-        static public bool EditRecipe(string name, Recipe recipe, RecipeList recipes)
+        static public bool EditRecipe(Recipe recipe, RecipeList recipes)
         {
-            var index = recipes.Recipes.IndexOf(recipes.Recipes.Where(r => r.Name == name).FirstOrDefault());
+            var index = recipes.Recipes.IndexOf(recipes.Recipes.Where(r => r.Name == recipe.Name).FirstOrDefault());
             if (index <= 0)
             {
                 recipes.Recipes[index] = recipe;
